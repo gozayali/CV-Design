@@ -5,6 +5,20 @@
 	<title>CV Design</title>
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script>
+		function goto(element, isSearch) {
+			for (var i = 0; i < element.childNodes.length; i++) {
+    			if (element.childNodes[i].className == "text") {
+      				var link = 'http://'+element.childNodes[i].innerHTML;
+					if(isSearch){
+						link='https://www.google.com/search?q='+element.childNodes[i].innerHTML.replaceAll('&amp;',' and ');						
+					}
+					window.open(link,'_blank')
+      				break;
+    			}        
+			}
+		}
+</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -59,13 +73,13 @@
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap clickable" onclick="goto(this,false)" >
 									<div class="icon"><i class="fab fa-github-square" aria-hidden="true"></i></div>
 									<div class="text">github.com/gozayali</div>
 								</div>
 							</li>	
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap clickable" onclick="goto(this,false)">
 									<div class="icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
 									<div class="text">linkedin.com/in/gozayali</div>
 								</div>
@@ -86,55 +100,55 @@
 					<div class="cards">
 						<ul>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-brain"></i></div>
 									<div class="text">Machine Learning</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-cogs"></i></div>
 									<div class="text">IoT</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-images"></i></div>
 									<div class="text">Image Processing</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="far fa-object-group"></i></div>
 									<div class="text">Object Oriented Programming</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fab fa-android"></i></div>
 									<div class="text">Android Development</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-database"></i></div>
 									<div class="text">Database Design</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="far fa-chart-bar"></i></div>
 									<div class="text">Analytics</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-tags"></i></div>
 									<div class="text">RFID</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-project-diagram"></i></div>
 									<div class="text">Arduino & Raspberry</div>
 								</div>
@@ -180,37 +194,37 @@
 					<div class="cards">
 						<ul>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-book"></i></div>
 									<div class="text">Reading</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-music"></i></div>
 									<div class="text">Music</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-robot"></i></div>
 									<div class="text">Robotics</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-swimmer"></i></div>
 									<div class="text">Swimming & Scubba Diving</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-basketball-ball"></i></div>
 									<div class="text">Basketball</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-futbol"></i></div>
 									<div class="text">Football</div>
 								</div>
@@ -226,7 +240,8 @@
 					<div class="info">
 						<ul>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap clickable"
+									onclick="window.open('https://www.idc.com/mea/events/64799-idc-manufacturing-executive-summit-2018','_blank')">
 									<div class="icon"><i class="fas fa-award"></i></div>
 									<div class="text">Best IoT Project of 2018<br>
 										<i style="color:lightsteelblue">IDC Turkey Manufacturing Technology Awards</i>
@@ -234,7 +249,8 @@
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap clickable"
+									onclick="window.open('https://www.idc.com/mea/events/64799-idc-manufacturing-executive-summit-2018','_blank')">
 									<div class="icon"><i class="fas fa-medal"></i></div>
 									<div class="text">2nd Big Data & Analytics Project of 2018 <br>
 										<i style="color:lightsteelblue">IDC Turkey Manufacturing Technology Awards</i>
@@ -253,7 +269,8 @@
 					<div class="info">
 						<ul>
 							<li>
-								<div class="li_wrap">
+								<div class="li_wrap clickable"
+									onclick="window.open('https://www.springerprofessional.de/en/optimal-batch-creation-for-bell-type-industrial-batch-annealing-/16122604','_blank')">>
 									<div class="icon"><i class="fas fa-quote-right"></i></div>
 									<div class="text">Optimal Batch Creation for Bell-Type Industrial Batch Annealing Furnace with an Annealing Time Prediction Model<br>
 										<i style="color:lightsteelblue">EngOpt 2018 Proceedings of the 6th International Conference on Engineering Optimization</i><br>
@@ -292,7 +309,7 @@
 										<div class="li_wrap">
 											<div class="date">
 												2017 - Present
-												<img src="images/borcelik.png" alt="picture">
+												<img src="images/borcelik.png" onclick="window.open('http://borcelik.com','_blank')">
 											</div>
 											<div class="info">
 												<p class="info_title">
@@ -324,7 +341,7 @@
 										<div class="li_wrap">
 											<div class="date">
 												2013 Summer
-												<img src="images/bilisim.png" alt="picture">
+												<img src="images/bilisim.png" onclick="window.open('http://bilisim.com.tr','_blank')">
 											</div>
 											<div class="info">
 												<p class="info_title">
@@ -347,7 +364,7 @@
 										<div class="li_wrap">
 											<div class="date">
 												2012 Summer
-												<img src="images/orman.png" alt="picture">
+												<img src="images/orman.png" onclick="window.open('https://www.tarimorman.gov.tr/','_blank')">
 											</div>
 											<div class="info">
 												<p class="info_title">
@@ -379,7 +396,7 @@
 										<div class="li_wrap">
 											<div class="date">
 												2008-2015
-												<img src="images/bilkent.png" alt="picture">
+												<img src="images/bilkent.png" onclick="window.open('https://bilkent.edu.tr','_blank')">
 											</div>
 											<div class="info">
 												<p class="info_title">
@@ -404,7 +421,7 @@
 										<div class="li_wrap">
 											<div class="date">
 												2013 Spring
-												<img src="images/roskilde.png" alt="picture">
+												<img src="images/roskilde.png" onclick="window.open('https://ruc.dk','_blank')"> 
 											</div>
 											<div class="info">
 												<p class="info_title">
@@ -427,7 +444,7 @@
 										<div class="li_wrap">
 											<div class="date">
 												2004-2007
-												<img src="images/mfl.png" alt="picture">
+												<img src="images/mfl.png" onclick="window.open('http://eafl33.meb.k12.tr','_blank')" >
 											</div>
 											<div class="info">
 												<p class="info_title">
@@ -506,8 +523,8 @@
 					</div>
 					</div>
 					
-					<div class="footer">
-					For HTML source code, visit https://github.com/gozayali<br>Copyright © 2021 Ali Gözay
+					<div class="footer" onclick = "window.open('https://github.com/gozayali/CV-Design','_blank')">
+						For HTML source code, visit github.com/gozayali/CV-Design<br>Copyright © 2021 Ali Gözay
 				</div>
 				</div>
 			</div>

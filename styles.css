@@ -83,6 +83,29 @@ body{
 	margin-bottom: 15px;
 }
 
+.info .clickable{
+	cursor: pointer;
+}
+
+.info .clickable:hover,
+.info .clickable:hover .icon,
+.info .clickable:hover .text{
+	background: white;
+	color: steelblue;
+	border-radius: 10px;
+}
+
+.info .clickable:active,
+.info .clickable:active .icon,
+.info .clickable:active .text{
+	background: steelblue;
+	color: white;
+}
+
+.info .clickable:active{
+	border: 2px solid #fff;
+}
+
 .info .li_wrap .icon{
 	width: 25px;
     height: 25px;
@@ -117,32 +140,35 @@ body{
 	text-align: center;
 	justify-content: center;
 	border: 2px solid #fff;
+	cursor: pointer;
 }
 
 .cards .li_wrap .icon,
 .cards .li_wrap .text{
 	margin-top: 5px;
-	color: steelblue;
+	color: #fff;
 }
 
-
 .cards .li_wrap .icon{
-	color: #fff;
 	font-size: 20px;
 }
 
 .cards .li_wrap .text{
-	color: #fff;
 	font-size: 9px;
 }
 
-.cards .li_wrap:hover{
-	background: #fff;
-}
-
+.cards .li_wrap:hover,
 .cards .li_wrap:hover .icon,
 .cards .li_wrap:hover .text{
+	background: #fff;
 	color: steelblue;
+}
+
+.cards .li_wrap:active,
+.cards .li_wrap:active .icon,
+.cards .li_wrap:active .text{
+	background: steelblue;
+	color: white;
 }
 
 .header{
@@ -207,8 +233,13 @@ body{
 
 .right_inner .li_wrap .date img{
 	width: 70%;
-	margin-top: 10px;
+	margin-top:10px;
+	cursor: pointer;
+}
 
+.right_inner .li_wrap .date img:hover{
+  width:75%;
+  transform: rotate(8deg);
 }
 
 .right_inner .li_wrap .info{
@@ -271,6 +302,15 @@ body{
 	float:right;
 	text-align: right;
 	padding: 4px 5px;
+	cursor: pointer;
+}
+
+.footer:hover{
+	color:lightsteelblue;
+}
+
+.footer:active{
+	color:steelblue;
 }
 
 .pagebreak{
