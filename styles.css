@@ -9,7 +9,7 @@
 }
 
 body{
-	background: linear-gradient(to right, #3525af, #9153c9);
+	background: black; /*linear-gradient(to right, #3525af, #9153c9);*/
 }
 
 .resume{
@@ -130,22 +130,30 @@ body{
 }
 
 .cards .li_wrap{
-	width: 65px;
-	height: 90px;
-	margin-bottom: 10px;
+	margin: 0px 3px 10px 3px;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	border: 2px solid #fff;
+	border: 1px solid #fff;
 	cursor: pointer;
+}
+
+.cards .big{
+	width: 62px;
+	height: 80px;
+}
+
+.cards .small{
+	padding: 3px 6px;
+	border: 2px solid orange;
 }
 
 .cards .li_wrap .icon,
 .cards .li_wrap .text{
-	margin-top: 5px;
+	margin: 3px 0px;
 	color: #fff;
 }
 
@@ -154,7 +162,7 @@ body{
 }
 
 .cards .li_wrap .text{
-	font-size: 9px;
+	font-size: 10px;
 }
 
 .cards .li_wrap:hover,

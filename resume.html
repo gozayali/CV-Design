@@ -18,9 +18,20 @@
     			}        
 			}
 		}
+		function writeInfo(){
+			var element = document.getElementsByClassName('footer')[0];
+
+			var info = document.createTextNode('For HTML source code, visit github.com/gozayali/CV-Design')
+			var br = document.createElement("br");
+			var date = document.createTextNode('Created: '+new Date().toJSON().slice(0,10).split('-').reverse().join('.'))
+
+			element.appendChild(info);
+			element.appendChild(br);
+			element.appendChild(date);
+		}
 </script>
 </head>
-<body>
+<body onload="writeInfo()">
 	<div class="wrapper">
 		<div class="resume">
 			<div class="left">
@@ -100,55 +111,55 @@
 					<div class="cards">
 						<ul>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-brain"></i></div>
 									<div class="text">Machine Learning</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-cogs"></i></div>
 									<div class="text">IoT</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-images"></i></div>
 									<div class="text">Image Processing</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="far fa-object-group"></i></div>
-									<div class="text">Object Oriented Programming</div>
+									<div class="text">OOP</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fab fa-android"></i></div>
-									<div class="text">Android Development</div>
+									<div class="text">Android</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-database"></i></div>
 									<div class="text">Database Design</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="far fa-chart-bar"></i></div>
 									<div class="text">Analytics</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-tags"></i></div>
 									<div class="text">RFID</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-project-diagram"></i></div>
 									<div class="text">Arduino & Raspberry</div>
 								</div>
@@ -189,42 +200,93 @@
 				
 				<div class="pb">
 					<div class="title">
+						Top Scripting
+					</div>
+					<div class="cards">
+						<ul>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">C#</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">Java</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">Python</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">SQL</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">JavaScript</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">CSS</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">HTML</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">JSON</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			
+				
+				<div class="pb">
+					<div class="title">
 						hobbies
 					</div>
 					<div class="cards">
 						<ul>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-book"></i></div>
 									<div class="text">Reading</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-music"></i></div>
 									<div class="text">Music</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-robot"></i></div>
 									<div class="text">Robotics</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-swimmer"></i></div>
 									<div class="text">Swimming & Scubba Diving</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-basketball-ball"></i></div>
 									<div class="text">Basketball</div>
 								</div>
 							</li>
 							<li>
-								<div class="li_wrap" onclick="goto(this,true)">
+								<div class="li_wrap big" onclick="goto(this,true)">
 									<div class="icon"><i class="fas fa-futbol"></i></div>
 									<div class="text">Football</div>
 								</div>
@@ -523,9 +585,7 @@
 					</div>
 					</div>
 					
-					<div class="footer" onclick = "window.open('https://github.com/gozayali/CV-Design','_blank')">
-						For HTML source code, visit github.com/gozayali/CV-Design<br>Copyright © 2021 Ali Gözay
-				</div>
+					<div class="footer" onclick = "window.open('https://github.com/gozayali/CV-Design','_blank')"></div>
 				</div>
 			</div>
 		</div>
