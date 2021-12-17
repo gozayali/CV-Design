@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CV Ali Gözay</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script>
+		function goto(element, isSearch) {
+			for (var i = 0; i < element.childNodes.length; i++) {
+				if (element.childNodes[i].className == "text") {
+					var link = 'http://' + element.childNodes[i].innerHTML;
+					if (isSearch) {
+						link = 'https://www.google.com/search?q=' + element.childNodes[i].innerHTML.replaceAll('&amp;', ' and ').replaceAll('#', ' sharp');
+					}
+					window.open(link, '_blank')
+					break;
+				}
+			}
+		}
+		function writeInfo() {
+			var element = document.getElementsByClassName('footer')[0];
+
+			var info = document.createTextNode('For HTML source code, visit github.com/gozayali/CV-Design')
+			var br = document.createElement("br");
+			var date = document.createTextNode('Created: ' + new Date().toJSON().slice(0, 10).split('-').reverse().join('.'))
+
+			element.appendChild(info);
+			element.appendChild(br);
+			element.appendChild(date);
+		}
+	</script>
+</head>
+
+<body onload="writeInfo()">
+	<div class="wrapper">
+		<div class="resume">
+			<div class="left">
+				<div class="img_holder">
+					<img src="images/profile.png" alt="picture">
+				</div>
+				<div class="pb">
+					<div class="title">
+						Personal Info
+					</div>
+					<div class="info">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<div class="icon"><i class="fas fa-baby" aria-hidden="true"></i></div>
+									<div class="text">14/06/1990</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<div class="icon"><i class="fas fa-address-card" aria-hidden="true"></i></div>
+									<div class="text">B, A2</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<div class="icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+									<div class="text">Completed</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pb">
+					<div class="title">
+						Contact Info
+					</div>
+					<div class="info">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<div class="icon"><i class="fas fa-mobile-alt" aria-hidden="true"></i></div>
+									<div class="text">05378610558</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<div class="icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+									<div class="text">gozayali@gmail.com</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap clickable" onclick="goto(this,false)">
+									<div class="icon"><i class="fab fa-github-square" aria-hidden="true"></i></div>
+									<div class="text">github.com/gozayali</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap clickable" onclick="goto(this,false)">
+									<div class="icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
+									<div class="text">linkedin.com/in/gozayali</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<div class="icon"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></div>
+									<div class="text">Beşevler Mh. Yıldırım Cd. No:141-143B Daire:3 Nilüfer/BURSA</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pb">
+					<div class="title">
+						Skills
+					</div>
+					<div class="cards">
+						<ul>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-brain"></i></div>
+									<div class="text">Machine Learning</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-cogs"></i></div>
+									<div class="text">IoT</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-images"></i></div>
+									<div class="text">Image Processing</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="far fa-object-group"></i></div>
+									<div class="text">OOP</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fab fa-android"></i></div>
+									<div class="text">Android</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-database"></i></div>
+									<div class="text">Database Design</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="far fa-chart-bar"></i></div>
+									<div class="text">Analytics</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-tags"></i></div>
+									<div class="text">RFID</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-project-diagram"></i></div>
+									<div class="text">Arduino & Raspberry</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="pb">
+					<div class="title">
+						Languages
+					</div>
+					<div class="info">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<div class="lang">TR</div>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<div class="lang">ENG</div>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="pb pagebreak">
+					<div class="title">
+						Top Scripting
+					</div>
+					<div class="cards">
+						<ul>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">C</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">C#</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">Java</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">Python</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">SQL</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">JavaScript</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">CSS</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">HTML</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap small" onclick="goto(this,true)">
+									<div class="text">JSON</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="pb">
+					<div class="title">
+						Exams
+					</div>
+					<div class="info">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<div class="lang">ALES<br><br>
+										<i style="color:lightsteelblue">May<br>2021</i>
+									</div>
+									<div class="text">94.35/100<br>
+										<i style="color:lightsteelblue">Selection Exam for Academic Personnel and
+											Graduate Studies</i><br>
+										<i style="color:steelblue">Valid for 5 years</i>
+									</div>
+								</div>
+							</li>
+							<div class="li_wrap ">
+								<div class="lang">e-YDS<br><br>
+									<i style="color:lightsteelblue">August<br>2021</i>
+								</div>
+								<div class="text">73.41/100<br>
+									<i style="color:lightsteelblue">Computer-Based Foreign Language Exam
+										(English)</i><br>
+									<i style="color:steelblue">Valid for 5 years</i>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+
+				<div class="pb">
+					<div class="title">
+						hobbies
+					</div>
+					<div class="cards">
+						<ul>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-book"></i></div>
+									<div class="text">Reading</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-music"></i></div>
+									<div class="text">Music</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-robot"></i></div>
+									<div class="text">Robotics</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-swimmer"></i></div>
+									<div class="text">Swimming & Scubba Diving</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-basketball-ball"></i></div>
+									<div class="text">Basketball</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap big" onclick="goto(this,true)">
+									<div class="icon"><i class="fas fa-futbol"></i></div>
+									<div class="text">Football</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="pb">
+					<div class="title">
+						awards
+					</div>
+					<div class="info">
+						<ul>
+							<li>
+								<div class="li_wrap clickable"
+									onclick="window.open('https://www.idc.com/mea/events/64799-idc-manufacturing-executive-summit-2018','_blank')">
+									<div class="icon"><i class="fas fa-award"></i></div>
+									<div class="text">Best IoT Project of 2018<br>
+										<i style="color:lightsteelblue">IDC Turkey Manufacturing Technology Awards</i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap clickable"
+									onclick="window.open('https://www.idc.com/mea/events/64799-idc-manufacturing-executive-summit-2018','_blank')">
+									<div class="icon"><i class="fas fa-medal"></i></div>
+									<div class="text">2nd Big Data & Analytics Project of 2018 <br>
+										<i style="color:lightsteelblue">IDC Turkey Manufacturing Technology Awards</i>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="pb">
+					<div class="title">
+						publications
+					</div>
+					<div class="info">
+						<ul>
+							<li>
+								<div class="li_wrap clickable"
+									onclick="window.open('https://www.springerprofessional.de/en/optimal-batch-creation-for-bell-type-industrial-batch-annealing-/16122604','_blank')">
+									<div class="icon"><i class="fas fa-quote-right"></i></div>
+									<div class="text">Optimal Batch Creation for Bell-Type Industrial Batch Annealing
+										Furnace with an Annealing Time Prediction Model<br>
+										<i style="color:lightsteelblue">EngOpt 2018 Proceedings of the 6th International
+											Conference on Engineering Optimization</i><br>
+										<i style="color:steelblue">01/01/2019</i>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="header">
+					<div class="name_role">
+						<div class="name">
+							Ali Gözay
+						</div>
+						<div class="role">
+							R&D Technology Development Sr. Engineer
+						</div>
+					</div>
+					<div class="about">
+						Experienced technology developer who understands the needs of variety of business units, offers
+						appropriate digital solutions to meet their needs and makes necessary improvements for their
+						work processes and working environments
+					</div>
+				</div>
+				<div class="right_plane">
+					<div class="right_inner">
+						<div class="pb">
+							<div class="title">
+								experience
+							</div>
+							<div class="exp_wrap">
+								<ul>
+									<li>
+										<div class="li_wrap">
+											<div class="date">
+												2017 - Present
+												<img src="images/borcelik.png"
+													onclick="window.open('http://borcelik.com','_blank')">
+											</div>
+											<div class="info">
+												<p class="info_title">
+													Technology Development Engineer
+												</p>
+												<p class="info_com">
+													Borçelik Çelik San. Tic. A.Ş. <br><i>(Joint venture of Borusan
+														Holding and Arcelor Mittal)</i>
+												</p>
+												<div class="info_cont">
+													<ul>
+														<li>Real-time tracking of Bluetooth®Low Energy (BLE) smart Tags
+															and devices (Quuppa Tags)</li>
+														<li>RFID-based tracking of coil, truck, trailer etc. (Harting &
+															Impinj)</li>
+														<li>Design of scalable sensor data & microservice architecture
+															and implementation</li>
+														<li>Condensation prediction in coil stock area (Machine Learning
+															- KNIME)</li>
+														<li>Text Extraction and Recognition from an Image embedded in
+															specific PDF using Neural Network(C#)</li>
+														<li>Detection of displacements on tensile specimens to achieve
+															higher strain values while Tensile testing (Image Processing
+															/ OpenCV)</li>
+														<li>Classification of steel scrap type using image recognition
+														</li>
+														<li>Tracking cranes' location by using radar and android devices
+															(Stockyard Management System integration for any warehouse)
+														</li>
+														<li>Variety of docker container apps for cloud</li>
+														<li>Variety of C# apps (for Weighbridge, Kiosk, etc)</li>
+														<li>Variety of Android apps (for Forklift operations, Stockyard
+															operations, etc)</li>
+														<li>AR apps (Unity-Vuforia, Processing-Java, Python-ARUCO)</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="li_wrap">
+											<div class="date">
+												2013 Summer
+												<img src="images/bilisim.png"
+													onclick="window.open('http://bilisim.com.tr','_blank')">
+											</div>
+											<div class="info">
+												<p class="info_title">
+													Summer Intern
+												</p>
+												<p class="info_com">
+													Bilişim A.Ş.
+												</p>
+												<div class="info_cont">
+													<ul>
+														<li>Organizational Chart Project</li>
+														<li>Using JBoss Seam, SVN, JSF, javascript, css, xhtml, JSON
+															,richfaces, Oracle10g, hibernate</li>
+														<li>A web-based project that aims easy control and present
+															organizations information and labor information of TOKİ. It
+															also makes organization and labors transparent and every
+															employee who uses this program could see organization and
+															labors but only the admin can manage information.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="li_wrap">
+											<div class="date">
+												2012 Summer
+												<img src="images/orman.png"
+													onclick="window.open('https://www.tarimorman.gov.tr/','_blank')">
+											</div>
+											<div class="info">
+												<p class="info_title">
+													Summer Intern
+												</p>
+												<p class="info_com">
+													T.C. Orman ve Su İşleri Bakanlığı (The Ministry of Forestry and
+													Water Affairs)
+												</p>
+												<div class="info_cont">
+													<ul>
+														<li>Document Management System for the Ministry</li>
+														<li>Research on Software Development Life Cycle (SDLC)</li>
+														<li>Work on Database design</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="pb">
+							<div class="title">
+								education
+							</div>
+							<div class="exp_wrap">
+								<ul>
+									<li>
+										<div class="li_wrap">
+											<div class="date">
+												2008-2015
+												<img src="images/bilkent.png"
+													onclick="window.open('https://bilkent.edu.tr','_blank')">
+											</div>
+											<div class="info">
+												<p class="info_title">
+													Bilkent University
+												</p>
+												<p class="info_com">
+													Engineering Faculty, Computer Science (English) <br><i>Success
+														Scholarship</i>
+												</p>
+												<div class="info_cont">
+													<ul>
+														<li>Introduction to Machine Learning</li>
+														<li>Principles of Engineering Management</li>
+														<li>Software Product Line Engineering</li>
+														<li>Software Engineering Project Management</li>
+														<li>GPA: 2.19/4.00</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="li_wrap pagebreak">
+											<div class="date">
+												2013 Spring
+												<img src="images/roskilde.png"
+													onclick="window.open('https://ruc.dk','_blank')">
+											</div>
+											<div class="info">
+												<p class="info_title">
+													Roskilde Universitetscenter (DANMARK)
+												</p>
+												<p class="info_com">
+													Informatic and Computer Engineering Faculty, Computer Science
+													(English) <br><i>Erasmus Programme</i>
+												</p>
+												<div class="info_cont">
+													<ul>
+														<li>Design of Interactive Experiences</li>
+														<li>Introduction to Graphics and Animation</li>
+														<li>Artificial Intelligence</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="li_wrap">
+											<div class="date">
+												2004-2007
+												<img src="images/mfl.png"
+													onclick="window.open('http://eafl33.meb.k12.tr','_blank')">
+											</div>
+											<div class="info">
+												<p class="info_title">
+													Mersin High School of Science
+												</p>
+												<p class="info_com">
+													High School
+												</p>
+												<div class="info_cont">
+													<ul>
+														<li>GPA: 91.99/100</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="pb">
+							<div class="title">
+								certifications
+							</div>
+							<div class="li_wrap">
+								<div class="cert_date">Jun, 2019</div>
+								<p class="cert_text">Gamified Agile & Scrum Training</p>
+								<p class="cert_com">ACM Agile</p>
+							</div>
+							<div class="li_wrap">
+								<div class="cert_date">Apr, 2019</div>
+								<p class="cert_text">Big Data and Business Analytics Certificate Program</p>
+								<p class="cert_com">Istanbul Technical University</p>
+							</div>
+							<div class="li_wrap">
+								<div class="cert_date">May, 2018</div>
+								<p class="cert_text">TEYDEB Proje Hazırlama ve Yürütme</p>
+								<p class="cert_com">Etkin Proje Danışmanlık</p>
+							</div>
+							<div class="li_wrap">
+								<div class="cert_date">Jul, 2017</div>
+								<p class="cert_text">Advanced Analytic Methods with KNIME Analytics Platform</p>
+								<p class="cert_com">InforA - Advanced Analytic Solutions</p>
+							</div>
+							<div class="li_wrap">
+								<div class="cert_date">Jun, 2017</div>
+								<p class="cert_text">The Magic of Situational Self Leadership</p>
+								<p class="cert_com">Blanchard International Turkey</p>
+							</div>
+							<div class="li_wrap">
+								<div class="cert_date">Apr, 2017</div>
+								<p class="cert_text">Basic Simulation Training with Simio</p>
+								<p class="cert_com">Dijitalis Yazılım ve Danışmanlık</p>
+							</div>
+						</div>
+						<div class="pb">
+							<div class="title">
+								organizations
+							</div>
+							<ul class="org">
+								<li><b>Borcelik Maker Club</b><span>(2019-Present)</span>
+									<div class="desc">Instructor</div>
+								</li>
+								<li><b>Hacettepe University Underwater Sports Club</b><span>(2011-2012)</span>
+									<div class="desc">Voluntary Support for Overcome the Disabilities by Diving Program
+									</div>
+								</li>
+								<li><b>Bilkent Street Lamp Project</b><span>(2011)</span>
+									<div class="desc">Voluntary Educational Support to Children</div>
+								</li>
+								<li><b>Korean Cultural Week Organization</b><span>(2011)</span>
+									<div class="desc">Voluntary Support to Korean Embassy</div>
+								</li>
+								<li><b>Bilkent University Open Source Software & Internet Technologies
+										Club</b><span>(2010)</span>
+									<div class="desc">Executive board member</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="pb">
+							<div class="title">
+								patent & utility model applications
+							</div>
+							<div class="li_wrap clickable"
+								onclick="window.open('https://portal.turkpatent.gov.tr/anonim/arastirma/patent/dosya-takibi','_blank')">
+								<div class="cert_date">12-10-2021</div>
+								<p class="cert_text">Bir Test Düzeneği</p>
+								<p class="cert_com">UTILITY MODEL<br>(2021/015851)</p>
+							</div>
+							<div class="li_wrap clickable"
+								onclick="window.open('https://portal.turkpatent.gov.tr/anonim/arastirma/patent/dosya-takibi','_blank')">
+								<div class="cert_date">20-10-2021</div>
+								<p class="cert_text">Bir Test Düzeneği</p>
+								<p class="cert_com">PATENT<br>(2021/016363)</p>
+							</div>
+							<div class="li_wrap clickable"
+								onclick="window.open('https://portal.turkpatent.gov.tr/anonim/arastirma/patent/dosya-takibi','_blank')">
+								<div class="cert_date">10-12-2021</div>
+								<p class="cert_text">Bir Test Sistemi</p>
+								<p class="cert_com">PATENT<br>(2021/19568)</p>
+							</div>
+							<div class="li_wrap clickable"
+								onclick="window.open('https://portal.turkpatent.gov.tr/anonim/arastirma/patent/dosya-takibi','_blank')">
+								<div class="cert_date">15-12-2021</div>
+								<p class="cert_text">Bir Malzeme Veri Kütüphanesi Oluşturma Sistemi</p>
+								<p class="cert_com">PATENT<br>(2021/020002)</p>
+							</div>
+						</div>
+					</div>
+					<div class="footer" onclick="window.open('https://github.com/gozayali/CV-Design','_blank')"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
